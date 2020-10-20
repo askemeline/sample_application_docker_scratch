@@ -7,7 +7,9 @@ jobs:
   include:
     - stage: test
       script:
+        - cd simple-api/
         - mvn clean verify
+        - cd -
     - stage: publish_database
       if: branch = develop
       script:
@@ -38,8 +40,10 @@ jobs:
           organization: 'askemeline' # the key of the org you chose at step #3
           token: $SECRET_SECURE
       script:
+        - cd simple-api/
         # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
         - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=askemeline_sample_application_docker_scratch
+        - cd -
     - stage: deploy
       if: branch = master
       addons:

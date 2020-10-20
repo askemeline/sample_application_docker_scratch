@@ -18,7 +18,7 @@ services:
     container_name: httpd
     image: tp-http
     ports:
-      - "80:80"
+      - '8080:8080'
     networks:
       - network
     depends_on:
