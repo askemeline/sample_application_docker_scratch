@@ -12,8 +12,8 @@ qui va :
 
 1. Build chaque image et la push sur DockerHub (une étape par service)
 2. Utiliser Ansible pour :
-	- Installer Docker sur votre machine
-	- Installer docker-compose sur votre machine
-	- ouvrir le port spécifique (80)
-	- installer le dernier `docker-compose.yaml`
-	- relancer le docker-compose
+	- Installer Docker sur votre serveur
+	- Installer docker-compose sur votre serveur
+	- ouvrir le port spécifique (80) sur votre serveur
+	- installer le dernier `docker-compose.yaml` sur votre serveur
+	- relancer le docker-compose sur votre serveur
