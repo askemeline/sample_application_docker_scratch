@@ -5,9 +5,9 @@ services:
 
 jobs:
   include:
-    # - stage: test
-    #   script:
-    #     - mvn clean verify
+    - stage: test
+      script:
+        - mvn clean verify
     - stage: publish_database
       if: branch = develop
       script:
